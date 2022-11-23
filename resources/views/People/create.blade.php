@@ -1,7 +1,7 @@
 @extends('People.layout')
 @section('content')
 <div class="card">
-  <div class="card-header">People Page</div>
+  <div class="card-header">People Page 1</div>
   <div class="card-body">
       
       <form action="{{ url('people') }}" method="post">
