@@ -5,10 +5,10 @@
 
             <div class="col-md-9" style="justify-content: center;margin: auto;">
                 <div class="card">
-                    <div class="card-header"><h3>People in the Philippines</h3></div>
+                    <div class="card-header"><h1>People in the Philippines</h1></div>
                     <div class="card-body">
                         <a href="{{ url('/people/create') }}" class="btn btn-success btn-sm" title="Add New People">
-                            <i class="fa fa-plus" aria-hidden="true"></i> Add New People
+                            <i class="fa fa-plus" aria-hidden="true"></i> Add People
                         </a>
                         <br/>
                         <br/>
@@ -35,7 +35,7 @@
                                         <td>{{ $item->mobile }}</td>
                                         <td>{{ $item->address }}</td>
                                         <td>
-                                            <a href="{{ url('/people/' . $item->id) }}" title="View People"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                            <a href="{{ url('/people/' . $item->id ) }}" title="View People"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/people/' . $item->id . '/edit') }}" title="Edit People"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
                                             <form method="POST" action="{{ url('/people' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}

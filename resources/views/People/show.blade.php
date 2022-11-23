@@ -1,7 +1,7 @@
 @extends('People.layout')
 @section('content')
 <div class="card">
-  <div class="card-header">People Page</div>
+  <div class="card-header"><h2>Show ang People</h2></div>
   <div class="card-body">
   
         <div class="card-body">
@@ -9,7 +9,7 @@
         <p class="card-text">Age : {{ $people->age }}</p>
         <p class="card-text">Gender : {{ $people->gender }}</p>
         <p class="card-text">Mobile : {{ $people->mobile }}</p>
-        <p class="card-text">Address : {{ $people->address }}</p>
+        <p class="card-text">Address : {{ $people->address}}</p>
   </div>
       
     </hr>

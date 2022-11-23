@@ -7,34 +7,30 @@ use Illuminate\Http\Request;
 class PeopleController extends Controller
 
     {
-  
         public function index()
         {
             $people = People::all();
           return view ('People.index')->with('people', $people);
         }
      
-        
+    
         public function create()
         {
             return view('People.create');
         }
      
-      
         public function store(Request $request)
         {
             $input = $request->all();
             People::create($input);
             return redirect('people')->with('flash_message', 'People created successfully!');  
-        }
-     
+        } 
         
         public function show($id)
         {
             $people = People::find($id);
             return view('People.show')->with('people', $people);
         }
-     
         
         public function edit($id)
         {
@@ -42,13 +38,24 @@ class PeopleController extends Controller
             return view('People.edit')->with('people', $people);
         }
      
-      
         public function update(Request $request, $id)
-        {
+        { 
             $people = People::find($id);
             $input = $request->all();
-            $people->update($input);
+
+            // Update user data
+            $people->name = $request->input('address');
+            $people->address = $request->input('name');
+            
+            // Save changes to user
+            $people->update();
             return redirect('people')->with('flash_message', 'People Updated!');  
+
+           // $people = People::find($id);
+            //$input = $request->all();
+            //$people->update($input);
+           // return redirect('people')->with('flash_message', 'People Updated!');  
+         
         }
 
         public function destroy($id)
@@ -56,4 +63,6 @@ class PeopleController extends Controller
             People::destroy($id);
             return redirect('people')->with('flash_message', 'People Deleted!');  
         }
+    
     }
+    

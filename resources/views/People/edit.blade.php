@@ -1,7 +1,7 @@
 @extends('People.layout')
 @section('content')
 <div class="card">
-  <div class="card-header">People Page</div>
+  <div class="card-header"><h2>Edit ang People</h2></div>
   <div class="card-body">
       
       <form action="{{ url('people/' .$people->id) }}" method="post">
@@ -23,7 +23,7 @@
         <label>Address</label></br>
         <input type="text" name="address" id="address" value="{{$people->address}}" class="form-control"></br>
 
-        <input type="submit" value="Update" class="btn btn-success"></br>
+        <input type="submit" value="Update People" class="btn btn-success"></br>
     </form>
   
   </div>

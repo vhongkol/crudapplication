@@ -1,11 +1,12 @@
 @extends('People.layout')
 @section('content')
 <div class="card">
-  <div class="card-header">People Page 1</div>
+  <div class="card-header"><h2>Create ang People</h2></div>
   <div class="card-body">
       
       <form action="{{ url('people') }}" method="post">
         {!! csrf_field() !!}
+
         <label>Name</label></br>
         <input type="text" name="name" id="name" class="form-control"></br>
 
@@ -21,7 +22,7 @@
         <label>Mobile</label></br>
         <input type="text" name="mobile" id="mobile" class="form-control"></br>
 
-        <input type="submit" value="Save" class="btn btn-success"></br>
+        <input type="submit" value="Save People" class="btn btn-success"></br>
     </form>
   
   </div>
